@@ -9,7 +9,7 @@ function App() {
     const addFruit = async () => {
         if (!fruit) return;
         try {
-            const response = await axios.post('http://localhost:3000/add-fruit', { fruit });
+            const response = await axios.post('https://fruits-list.onrender.com/add-fruit', { fruit });
             setFruitsList(response.data.fruits);
             setFruit('');
         } catch (error) {
